@@ -1,7 +1,7 @@
 {
   "name": "ohma",
-  "description": "Yet another CORS proxy experiment",
   "version": "0.0.0-development",
+  "description": "Yet another CORS proxy experiment",
   "main": "lib/index.js",
   "engine": {
     "node": ">=8.0.0"
@@ -34,7 +34,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

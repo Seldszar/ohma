@@ -1,5 +1,15 @@
 {
   "root": true,
   "parser": "babel-eslint",
-  "extends": "plugin:prettier/recommended"
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": "off"
+  }
 }

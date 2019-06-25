@@ -1,4 +1,5 @@
 const yargs = require("yargs");
+const bootstrap = require("..");
 
 const { argv } = yargs
   .env()
@@ -13,4 +14,12 @@ const { argv } = yargs
     default: null,
   });
 
-require("..")(argv);
+const server = bootstrap(argv);
+
+server.on("error", error => {
+  console.error(error);
+});
+
+server.on("listening", () => {
+  console.info("Server is listening port %d...", server.address().port);
+});
